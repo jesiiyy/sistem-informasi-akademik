@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li class="menu-item active" data-target="dashboard">Dashboard</li>
+        <li class="menu-item" data-target="data-siswa">Data Siswa</li>
+        <li class="menu-item" data-target="data-guru">Data Guru</li>
+        <li class="menu-item" data-target="mata-pelajaran">Mata Pelajaran</li>
+        <li class="menu-item" data-target="jadwal">Jadwal</li>
+        <li class="menu-item" data-target="akun">Akun</li>
+        <li class="menu-item" data-target="nilai">Nilai</li>
+        <li class="menu-item" data-target="pengumuman">Pengumuman</li>
+        <li><a href="index.html" style="color:white; text-decoration:none">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section id="dashboard" class="section active">
+        <div class="card">
+          <h3>Selamat Datang, Admin!</h3>
+          <p>Ringkasan Data Akademik:</p>
+          <ul>
+            <li>Jumlah Siswa: 320</li>
+            <li>Jumlah Guru: 28</li>
+            <li>Jumlah Mata Pelajaran: 15</li>
+          </ul>
+        </div>
+      </section>
+
+      
+<section id="data-siswa" class="section">
+  <div class="card">
+    <h3>Data Siswa</h3>
+
+    <form id="formSiswa" style="margin-bottom: 20px;">
+      <input type="text" id="namaSiswa" placeholder="Nama" required>
+      <input type="text" id="kelasSiswa" placeholder="Kelas" required>
+      <select id="statusSiswa" required>
+        <option value="Aktif">Aktif</option>
+        <option value="Tidak Aktif">Tidak Aktif</option>
+      </select>
+      <button type="submit">Tambah Siswa</button>
+    </form>
+
+    <div id="daftarSiswa">
+      <div style="margin-bottom: 15px;">
+        <strong>Nama:</strong> Jessica Angelica<br>
+        <strong>Kelas:</strong> X RPL<br>
+        <strong>Status:</strong> Aktif<br>
+        <button onclick="hapusSiswa(this)">Hapus</button>
+        <button onclick="editSiswa(this)">Edit</button>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <strong>Nama:</strong> Charista Dwi Pelangi<br>
+        <strong>Kelas:</strong> X RPL<br>
+        <strong>Status:</strong> Aktif<br>
+        <button onclick="hapusSiswa(this)">Hapus</button>
+        <button onclick="editSiswa(this)">Edit</button>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <strong>Nama:</strong> Choirul Amsor Sanusi<br>
+        <strong>Kelas:</strong> XI RPL<br>
+        <strong>Status:</strong> Aktif<br>
+        <button onclick="hapusSiswa(this)">Hapus</button>
+        <button onclick="editSiswa(this)">Edit</button>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <strong>Nama:</strong> Adven Genjot<br>
+        <strong>Kelas:</strong> XI RPL<br>
+        <strong>Status:</strong> Aktif<br>
+        <button onclick="hapusSiswa(this)">Hapus</button>
+        <button onclick="editSiswa(this)">Edit</button>
+    </div>
+  </div>
+</section>
+
+
+      <section id="data-guru" class="section">
+        <div class="card">
+          <h3>Data Guru</h3>
+          <ul style="margin-bottom: 15px;">
+            <li>Nama: Bu Camilla</li>
+            <li>Mata Pelajaran: Kejuruan</li>
+            <li>Status: Tetap</li>
+          </ul>
+
+          <ul style="margin-bottom: 15px;">
+            <li>Nama: Bu Tira</li>
+            <li>Mata Pelajaran: Matematika</li>
+            <li>Status: Tetap</li>
+          </ul>
+
+          <ul style="margin-bottom: 15px;">
+            <li>Nama: Bu Divine</li>
+            <li>Mata Pelajaran: Sejarah</li>
+            <li>Status: Tetap</li>
+          </ul>
+
+          <ul style="margin-bottom: 15px;">
+            <li>Nama: Bu Angelyc</li>
+            <li>Mata Pelajaran: Agama</li>
+            <li>Status: Magang</li>
+          </ul>
+
+          <ul style="margin-bottom: 15px;">
+            <li>Nama: Bu Pelangi</li>
+            <li>Mata Pelajaran: Bahasa Indonesia</li>
+            <li>Status: Tetap</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="mata-pelajaran" class="section">
+        <div class="card">
+          <h3>Mata Pelajaran</h3>
+          <ul>
+            <li>Matematika</li>
+            <li>Bahasa Indonesia</li>
+            <li>Kejuruan</li>
+            <li>Sejarah</li>
+            <li>Agama</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="jadwal" class="section">
+        <div class="card">
+          <h3>Jadwal Pelajaran</h3>
+          <table>
+            <thead>
+              <tr><th>Hari</th><th>Kelas</th><th>Mapel</th><th>Jam</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Senin</td><td>X RPL</td><td>Agama</td><td>08:00 - 09:30</td></tr>
+              <tr><td>Selasa</td><td>XI RPL</td><td>Bahasa Indonesia</td><td>10:00 - 11:30</td></tr>
+              <tr><td>Rabu</td><td>X RPL</td><td>Sejarah</td><td>08:00 - 09:30</td></tr>
+              <tr><td>Kamis</td><td>XI RPL</td><td>Kejuruan</td><td>10:00 - 11:30</td></tr>
+              <tr><td>Jumat</td><td>X RPL</td><td>Matematika</td><td>08:00 - 09:30</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="akun" class="section">
+        <div class="card">
+          <h3>Kelola Akun</h3>
+          <p>Buat akun untuk guru dan siswa.</p>
+          <ul style="margin-bottom: 15px;">
+            <li>Username: siswa123</li>
+            <li>Password: ••••••</li>
+            <li>Role: Siswa</li>
+          </ul>
+          <ul>
+            <li>Username: guru123</li>
+            <li>Password: ••••••</li>
+            <li>Role: Siswa</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="nilai" class="section">
+        <div class="card">
+          <h3>Nilai</h3>
+          <p>Rekap nilai siswa:</p>
+          <table>
+            <thead><tr><th>Nama</th><th>Kelas</th><th>Mapel</th><th>Nilai</th></tr></thead>
+            <tbody>
+              <tr><td>Jessica Angelica</td><td>X RPL</td><td>Kejuruan</td><td>95</td></tr>
+              <tr><td>Charista Dwi Pelangi</td><td>X RPL</td><td>Kejuruan</td><td>95</td></tr>
+              <tr><td>Choirul Amsor Sanusi</td><td>XI RPL</td><td>Kejuruan</td><td>88</td></tr>
+              <tr><td>Adven Genjot</td><td>XI RPL</td><td>Kejuruan</td><td>98</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="pengumuman" class="section">
+        <div class="card">
+          <h3>Pengumuman Akademik</h3>
+          <ul>
+            <li>Libur akhir semester mulai 1 Juli.</li>
+            <li>Pendaftaran ulang tahun ajaran baru mulai 15 Juli.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

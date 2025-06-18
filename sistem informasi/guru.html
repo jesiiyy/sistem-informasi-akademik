@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Guru</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Guru</h2>
+      <ul>
+        <li class="menu-item active" data-target="dashboard">Dashboard</li>
+        <li class="menu-item" data-target="daftar-siswa">Daftar Siswa</li>
+        <li class="menu-item" data-target="input-nilai">Input Nilai</li>
+        <li class="menu-item" data-target="perbaikan">Perbaikan</li>
+        <li class="menu-item" data-target="jadwal">Jadwal Pelajaran</li>
+        <li class="menu-item" data-target="pengumuman">Pengumuman</li>
+        <li><a href="index.html" style="color:white; text-decoration:none">Keluar</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section id="dashboard" class="section active">
+        <div class="card">
+          <h3>Selamat Datang, Guru!</h3>
+          <p>Berikut adalah ringkasan kelas dan mata pelajaran yang Anda ampu.</p>
+          <ul>
+            <li>Kelas X RPL - Kejuruan</li>
+            <li>Kelas XI RPL - Kejuruan</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="daftar-siswa" class="section">
+        <div class="card">
+          <h3 class="section-title">Daftar Siswa</h3>
+          <table>
+            <thead>
+              <tr><th>Nama</th><th>Kelas</th><th>NIS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Jessica Angelica</td><td>X RPL</td><td>1912007</td></tr>
+              <tr><td>Charista Dwi Pelangi</td><td>X RPL</td><td>1612007</td></tr>
+              <tr><td>Choirul Amsor Sanusi</td><td>XI RPL</td><td>1102006</td></tr>
+              <tr><td>Adven Genjot</td><td>XI RPL</td><td>1512007</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="input-nilai" class="section">
+  <div class="card">
+    <h3 class="section-title">Input Nilai</h3>
+    <form id="nilaiForm">
+      <label>Nama Siswa:</label>
+      <input type="text" id="namaSiswa" placeholder="Masukkan nama siswa" required>
+      <label>Nilai:</label>
+      <input type="number" id="nilaiSiswa" placeholder="Masukkan nilai" required>
+      <button type="submit">Simpan</button>
+    </form>
+
+    <table id="tabelNilai" style="margin-top:20px; display:none;">
+      <thead>
+        <tr><th>Nama Siswa</th><th>Nilai</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+
+      <section id="perbaikan" class="section">
+        <div class="card">
+          <h3 class="section-title">Perbaikan Nilai</h3>
+          <p>Daftar siswa yang mengajukan perbaikan nilai:</p>
+          <ul>
+            <li>Choirul Amsor Sanusi - XI RPL - Kejuruan (Ulangan 1)</li>
+            <li>Jessica Angelica - X RPL - Kejuruan (Tugas 2)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="jadwal" class="section">
+        <div class="card">
+          <h3 class="section-title">Jadwal Mengajar</h3>
+          <table>
+            <thead>
+              <tr><th>Hari</th><th>Jam</th><th>Kelas</th><th>Mapel</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Senin</td><td>08:00 - 09:30</td><td>X RPL</td><td>Kejuruan</td></tr>
+              <tr><td>Selasa</td><td>10:00 - 11:30</td><td>XI RPL</td><td>Kejuruan</td></tr>
+              <tr><td>Rabu</td><td>08:00 - 09:30</td><td>XI RPL</td><td>Kejuruan</td></tr>
+              <tr><td>Kamis</td><td>06:30 - 08:30</td><td>X RPL</td><td>Kejuruan</td></tr>
+              <tr><td>Jumat</td><td>07:00 - 08:00</td><td>XI RPL</td><td>Kejuruan</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="pengumuman" class="section">
+        <div class="card">
+          <h3 class="section-title">Pengumuman</h3>
+          <ul>
+            <li>📌 Pengumpulan nilai akhir sebelum 30 Juni.</li>
+            <li>📌 Rapat guru pada 25 Juni pukul 10.00 WIB.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

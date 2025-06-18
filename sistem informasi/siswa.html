@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Siswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Siswa</h2>
+      <ul>
+        <li class="menu-item active" data-target="dashboard">Dashboard</li>
+        <li class="menu-item" data-target="nilai">Ringkasan Nilai</li>
+        <li class="menu-item" data-target="jadwal">Jadwal Pelajaran</li>
+        <li class="menu-item" data-target="biodata">Biodata</li>
+        <li class="menu-item" data-target="pengumuman">Pengumuman</li>
+        <li><a href="index.html" style="color:white; text-decoration:none">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section id="dashboard" class="section active">
+        <div class="card">
+          <h3>Selamat Datang, Jessica Angelica!</h3>
+          <p>Jangan lupa untuk mengerjakan tugasmu ya!</p>
+        </div>
+      </section>
+
+      <section id="nilai" class="section">
+        <div class="card">
+          <h3>Ringkasan Nilai</h3>
+          <table>
+            <thead>
+              <tr><th>Mata Pelajaran</th><th>Nilai</th><th>Semester Ganjil</th><th>Semester Genap</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Matematika</td><td>85</td><td>85</td><td>84</td></tr>
+              <tr><td>Bahasa Indonesia</td><td>79</td><td>85</td><td>85</td></tr>
+              <tr><td>Kejuruan</td><td>80</td><td>99</td><td>87</td></tr>
+              <tr><td>Serajah</td><td>88</td><td>98</td><td>86</td></tr>
+              <tr><td>Agama</td><td>90</td><td>89</td><td>99</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="jadwal" class="section">
+        <div class="card">
+          <h3>Jadwal Pelajaran</h3>
+          <table>
+            <thead>
+              <tr><th>Hari</th><th>Jam</th><th>Mata Pelajaran</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Senin</td><td>08:00 - 09:30</td><td>Matematika</td></tr>
+              <tr><td>Selasa</td><td>10:00 - 11:30</td><td>Kejuruan</td></tr>
+              <tr><td>Rabu</td><td>08:00 - 09:30</td><td>Bahasa Indonesia</td></tr>
+              <tr><td>Kamis</td><td>06:30 - 08:30</td><td>Agama</td></tr>
+              <tr><td>Jumat</td><td>07:00 - 08:00</td><td>Sejarah</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="biodata" class="section">
+        <div class="card">
+          <h3>Biodata Siswa</h3>
+          <ul>
+            <li>Nama: Jessica Angelica</li>
+            <li>NIS: 191207</li>
+            <li>Kelas: XI RPL</li>
+            <li>Sekolah: SMK Hang Tuah 1 Jakarta</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="pengumuman" class="section">
+        <div class="card">
+          <h3>Pengumuman</h3>
+          <ul>
+            <li>Ujian Akhir Semester dimulai tanggal 24 Juni.</li>
+            <li>Wajib hadir pada pertemuan orang tua tanggal 28 Juni.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
